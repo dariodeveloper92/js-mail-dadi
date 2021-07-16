@@ -1,23 +1,27 @@
-//Esercizio: Mail---------------------------------------------------------------------
-//Chiedi all’utente la sua email:
+//ESERCIZIO: Mail
+//Chiedi all’utente la sua email:-------------------------------------------------
 var mail = prompt("Inserisci la tua email");
 console.log(mail);
 
-
-
-//controlla che sia nella lista di chi può accedere:
+//controlla che sia nella lista di chi può accedere:-------------------------------
+//Variabili
 var listaMail = ['dario.defrancisci92@gmail.com', 'office@spotify.com'];
-var notFound = [' '];
-var risultato = listaMail + notFound;
+var risultato;
+//Fine variabili
 
-if (listaMail)
-{
+//Array + Cicli
+for (var i = 0; i < listaMail.length; i++) {
+    console.log(listaMail[i]);
+
+    if (mail == listaMail[i])  {
     risultato = ' Accesso eseguito correttamente ';
+    i = listaMail.length;     
+    }
+    else {
+    risultato = ' Accesso non eseguito ';
+    }
 }
-else if (notFound)
-{
-    risultato = ' Accesso non eseguito '
-}
-//stampa un messaggio appropriato sull’esito del controllo:
-document.getElementById("mail").innerHTML = ' Accesso eseguito correttamente ' ;
-document.getElementById("notfound").innerHTML = ' Accesso non eseguito  ' ;
+//Fine Array + Cicli
+
+//stampa un messaggio appropriato sull’esito del controllo:-------------------------
+document.getElementById("mail").innerHTML = risultato;
