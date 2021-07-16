@@ -8,6 +8,7 @@ console.log(giocatore1)
 
 console.log(giocatorepc)
 
+//Stabilire il vincitore, in base a chi fa il punteggio più alto.
 giocatore1 = document.getElementById(giocatore1);
 giocatore2 = document.getElementById(giocatore1);
 
@@ -18,5 +19,5 @@ vincitore = 'vincitore';
 
 
 
-//Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
 
